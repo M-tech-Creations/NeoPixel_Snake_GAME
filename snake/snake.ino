@@ -35,10 +35,10 @@
 //   NEO_KHZ400  400 KHz (classic 'v1' (not v2) FLORA pixels, WS2811 drivers)
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(40, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(256, PIN, NEO_GRB + NEO_KHZ800);
 
-#define X 5//this is the depth of the field
-#define Y 8//this is the length of the field
+#define X 16//this is the depth of the field
+#define Y 16//this is the length of the field
 
 const int DataPin = 8;//PS/2 pin 1
 const int IRQpin =  2;//PS/2 pin 5
@@ -63,11 +63,11 @@ uint16_t SetElement(uint16_t, uint16_t);//2D array into a number
 
 int gameBoard[X][Y] = //game field, 0 is empty, -1 is food, >0 is snake
 {
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0}	
+	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},	
 };
 
 void setup()
