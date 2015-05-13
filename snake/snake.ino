@@ -175,7 +175,7 @@ void updateGame()
 		moveSnake(sDr,sDc);//keeps the Snake moving in the current direction
 		
 	}
-	if (game && start))//checks to make sure the game is running and good
+	if (game && start)//checks to make sure the game is running and good
 	{
 		
 		drawBoard();//update the screen
